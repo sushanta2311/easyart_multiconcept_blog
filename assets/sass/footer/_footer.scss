@@ -1,0 +1,186 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+.site-footer {
+	.widget-title {
+		font-size: 20px;
+		font-weight: 700;
+		margin-bottom: 30px;
+		color: $color__heading;
+		text-transform: capitalize;
+		margin-top: -3px;
+		@media only screen and (max-width: 991px) {
+			font-size: 18px;
+			margin-bottom: 25px;
+		}
+		&.font-barlow {
+			font-family: $font_barlow;
+			@media only screen and (min-width: 1200px) {
+				font-size: 22px;
+			}
+		}
+	}
+	.custom-container-content {
+		.footer-widget-area {
+			padding-bottom: 10px;
+		}
+		&.bg-black {
+			background-color: $black;
+			color: #d3d4d4;
+			.widget-title {
+				color: $white;
+			}
+			.footer-bottom-area {
+				border-top-color: #3B3B3B;
+			}
+		}
+	}
+	.footer-widget-area {
+		color: $color__meta-widget;
+		font-size: 14px;
+		padding-bottom: 30px;
+		.tb-subscribe-widget {
+			.subscribe-form {
+				@media only screen and (max-width: 767px) {
+					padding-top: 10px;
+				}
+			}
+			.widget-content > p {
+				padding-right: 50px;
+				line-height: 1.8em;
+				@media only screen and (max-width: 991px) {
+					padding-right: 0;
+				}
+			}
+		}
+		.bt-location-widget .widget-content {
+			padding-right: 50px;
+			@media only screen and (max-width: 767px) {
+				padding-right: 0;
+			}
+		}
+	}
+	.instagram-widget-area.pd-b-35 {
+		@media only screen and (max-width: 991px) {
+			padding-bottom: 15px;
+		}
+	}
+	&.footer-style-two {
+		background-color: $white;
+		padding-top: 15px;
+		.widget-title {
+			font-family: $font_barlow;
+			font-weight: 800;
+		}
+	}
+	&.footer-style-three {
+		padding-top: 5px;
+		.bt-instafeed-widget {
+			margin-bottom: 0;
+		}
+		.footer-bottom-area {
+			border-top: 0px solid;
+		}
+	}
+	&.footer-style-four {
+		.footer-bottom-area {
+			border-top: 0px solid;
+			padding-bottom: 60px;
+			padding-top: 35px;
+			.copyright-text {
+				letter-spacing: 0.01em;
+				color: #404040;
+				margin-bottom: 20px;
+			}
+		}
+	}
+	&.footer-style-five,
+	&.footer-style-six {
+		background-color: $white_smoke;
+		.bt-instafeed-widget {
+			margin-bottom: 10px;
+		} 
+		.footer-bottom-area {
+			border-top: 0px solid;
+			.socail-share-text {
+				padding-bottom: 32px;
+			}
+			.copyright-text {
+				border-top: 1px solid #e1e1e1;
+				padding-top: 20px;
+				> p {
+					color: #212121;
+				}
+			}
+		}
+	}
+	&.footer-style-five {
+		padding-top: 165px;
+		margin-top: -95px;
+		@media only screen and (max-width: 991px) {
+			margin-top: -130px;
+			padding-top: 190px;
+		}
+	}
+}
+.copyright-text {
+	margin-bottom: 0;
+	font-size: 14px;
+	letter-spacing: 0.1em;
+	> p {
+		color: #7f7f7f;
+	}
+	a {
+		display: inline-block;
+		padding-left: 5px;
+		&:hover {
+			color: $color__primary;
+		}
+	}
+}
+.footer-bottom-area {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	border-top: 1px solid #e1e1e1;
+	.socail-share {
+		text-align: center;
+		> a {
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			line-height: 32px;
+			background-color: $color__primary;
+			color: $white; 
+			font-size: 13px;
+			margin: 0 2px;
+			&:hover {
+				background-color: $color__heading;
+			}
+		}
+	} 
+	.socail-share-text {
+		text-align: center;
+		> a {
+			display: inline-block;
+			color: $black; 
+			font-size: 14px;
+			margin: 0 30px 7px;
+			font-family: $font_heading;
+			letter-spacing: 0.04em;
+			font-weight: 700;
+			border-bottom: 1px solid $black;
+			line-height: 1.5em;
+			@media only screen and (max-width: 991px) {
+				margin: 0 15px 7px;
+			}
+			@media only screen and (max-width: 767px) {
+				margin: 0 8px 7px;
+				font-size: 12px;
+			}
+			&:hover {
+				color: $color__primary;
+			}
+		}
+	} 
+}

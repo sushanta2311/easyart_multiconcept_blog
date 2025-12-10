@@ -1,0 +1,349 @@
+/*-------------------------------------------------
+    [ ## Buttons ]
+*/
+
+button {
+	@include prefixed(transition, all 0.25s ease);
+}
+
+input[type='button'] {
+	@extend button;
+}
+
+input[type='reset'] {
+	@extend button;
+}
+
+input[type='submit'] {
+	@extend button;
+	&:hover {
+		color: $white;
+	}
+}
+
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	cursor: pointer;
+	-webkit-appearance: button;
+	&:focus {
+		outline: none;
+	}
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+.btn {
+	-webkit-transition: all 0.3s ease 0.02s;
+	transition: all 0.3s ease 0.02s;
+}
+.btn:active,
+.btn:focus {
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.125) inset;
+}
+.btn {
+	border: 0px solid;
+	border-radius: 0px;
+	font-weight: 500;
+	font-size: 14px;
+	-webkit-transition: all 0.3s ease 0s;
+	transition: all 0.3s ease 0s;
+	@media only screen and (max-width: 480px) {
+		font-size: 12px;
+	}
+}
+
+.btn-default {
+	padding: 15px 35px;
+	color: $white;
+	background-color: $color__primary;
+	text-transform: uppercase;
+	@media only screen and (max-width: 480px) {
+		padding: 12px 20px;
+	}
+	&:focus,
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+	&.btn-black {
+		background-color: $black;
+		&:focus,
+		&:hover {
+			background-color: $color__primary;
+		}
+	}
+	&.btn-white {
+		&:focus,
+		&:hover {
+			background-color: $white;
+			color: $color__primary;
+		}
+	}
+}
+.btn-primary.active:focus:not(:disabled):not(.disabled),
+.btn-primary:focus {
+	box-shadow: 0 0 0 0rem rgba(38, 143, 255, 0);
+}
+.btn-primary {
+	background-color: transparent;
+	color: $black;
+	border: 2px solid $black;
+	padding: 10px 30px;
+	&.active:focus:not(:disabled):not(.disabled),
+	&:focus {
+		box-shadow: 0 0 0 0rem rgba(38, 143, 255, 0.5);
+	}
+	&:hover,
+	&:focus {
+		background-color: $color__primary !important;
+		color: $white !important;
+		border: 2px solid $color__primary;
+	}
+	&:active {
+		box-shadow: 0 0 0 0rem rgba(0, 0, 0, 0) !important;
+	}
+	&.btn-white {
+		border-color: $white;
+		color: $white;
+		padding: 10px 25px;
+		&:hover,
+		&:focus {
+			border-color: $color__primary !important;
+		}
+	}
+}
+
+.video-btn {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	line-height: 110px;
+	background-color: rgba($white, 0.2);
+	text-align: center;
+	font-size: 54px;
+	color: $white;
+	border-radius: 50%;
+	cursor: pointer;
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+	display: inline-block;
+	z-index: 0;
+	box-shadow: 3px 3px 7px rgba($black, 0.125);
+	&:after {
+		display: block;
+		content: '';
+		width: 120px;
+		height: 120px;
+		line-height: 120px;
+		border-radius: 50%;
+		background-color: rgba($white, 0.15);
+		position: absolute;
+		text-align: center;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		z-index: -1;
+	}
+	&:hover,
+	&:focus {
+		color: $color__primary;
+	}
+	@media only screen and (max-width: 767px) {
+		width: 80px;
+		height: 80px;
+		line-height: 90px;
+		font-size: 36px;
+		&:after {
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+		}
+	}
+}
+.btn-group-default {
+	margin: 50px -5px -5px;
+	@media only screen and (max-width: 991px) {
+		margin-top: 45px;
+	}
+	@media only screen and (max-width: 480px) {
+		margin-top: 35px;
+	}
+	> .btn {
+		margin: 5px;
+	}
+}
+.show-more {
+	text-align: center;
+	.button {
+		display: inline-block;
+		font-size: 16px;
+		font-weight: 500;
+		color: $color__heading;
+		> span {
+			display: block;
+			margin-top: 7px;
+		}
+		&:hover {
+			color: $color__primary;
+		}
+	}
+}
+
+.more-link {
+	font-size: 14px;
+	font-weight: bold;
+	line-height: normal;
+	word-spacing: 0.02em;
+	letter-spacing: 0.01em;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	@include prefixed(transition, all 0.25s ease);
+	&:hover,
+	&:focus,
+	&:active:focus {
+		color: $white;
+		text-decoration: none !important;
+	}
+}
+.read-more-text {
+	font-weight: normal;
+	color: #646464;
+	font-size: 15px;
+	font-family: $font_barlow2;
+	text-transform: capitalize;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-transition: all 0.25s;
+	transition: all 0.25s;
+	font-weight: 600;
+	@media only screen and (max-width: 575px) {
+		font-size: 14px;
+	}
+	> [class*='fa-'] {
+		padding-left: 5px;
+		-webkit-transition: all 0.25s;
+		transition: all 0.25s;
+		margin-top: 2px;
+		font-size: 12px;
+		@media only screen and (max-width: 575px) {
+			font-size: 11px;
+		}
+	}
+	&:hover {
+		color: $color__primary;
+		> [class*='fa-'] {
+			padding-left: 8px;
+		}
+	}
+}
+.load-more-btn {
+	font-size: 16px;
+	font-weight: 700;
+	color: $black;
+	letter-spacing: 0.2em;
+	padding: 12px 35px;
+	background-color: $white_smoke;
+	display: inline-block;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	@media only screen and (max-width: 575px) {
+		font-size: 15px;
+	}
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+}
+
+.comment-navigation {
+	.nav-links {
+		a {
+			background: $white;
+			display: inline-block;
+			padding: 0.5em 1.8em;
+			letter-spacing: 0.02em;
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+}
+
+.mfp-wrap {
+	button:hover {
+		background: transparent !important;
+	}
+}
+
+.btn-play {
+	padding: 15px;
+	display: inline-block;
+	font-size: 16px;
+	height: 55px;
+	width: 55px;
+	line-height: 25px;
+}
+
+.social-btn-lg {
+	display: inline-block;
+	font-size: 12px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+
+.btn-gf {
+	border-style: solid;
+	border-width: 5px;
+	border-color: $white;
+	border-radius: 50%;
+	box-shadow: 0px 6px 20px 0px rgba(0, 0, 0, 0.14);
+}
+
+.btn-lg {
+	padding: 15px 45px;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.btn-md {
+	padding: 10px 30px;
+	display: inline-block;
+	font-size: 15px;
+}
+
+.btn-xl {
+	padding: 15px 45px;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 15px;
+	letter-spacing: 0.015em;
+}
+
+.btn-slider {
+	padding: 10px 45px;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 30px;
+	border-width: 3px;
+}
+
+.btn-slider-xl {
+	padding: 15px 45px;
+	display: inline-block;
+	font-size: 15px;
+	border-radius: 30px;
+}

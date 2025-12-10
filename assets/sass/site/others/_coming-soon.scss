@@ -1,0 +1,67 @@
+.coming-soon-block {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.coming-soon-content {
+  .site-logo {
+      margin-bottom: 80px;
+      @media only screen and (max-width:991px){
+          margin-bottom: 60px;
+      }
+  }
+  .social-status-two a {
+      color: $white;
+  }
+}
+
+.countdown-area {
+  margin-bottom: -45px;
+  .timer-body-block {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      margin: 0 -15px; 
+      > .table-cell {
+          -webkit-box-flex: 0;
+              -ms-flex: 0 0 calc(25% - 30px);
+                  flex: 0 0 calc(25% - 30px);
+          max-width: calc(25% - 30px);
+          margin: 0 15px 30px;
+          text-align: center;
+          @media only screen and (max-width:767px){
+              -webkit-box-flex: 0;
+                  -ms-flex: 0 0 calc(50% - 30px);
+                      flex: 0 0 calc(50% - 30px);
+              max-width: calc(50% - 30px);
+          }
+          > .tab-val {
+              font-family: $font_heading;
+              font-size: 48px;
+              font-weight: 800;
+              margin-bottom: 0px;
+              line-height: 0.9em;
+              color: $white;
+              @media only screen and (max-width:767px){
+                  font-size: 42px;
+              }
+          }
+          > .tab-metr {
+              font-size: 18px;
+              font-weight: 700;
+              text-transform: capitalize;
+              color: #bdbdbd;
+              padding: 13px 0;
+              @media only screen and (max-width:767px){
+                font-size: 16px;
+            }
+          }
+      }
+  }
+}

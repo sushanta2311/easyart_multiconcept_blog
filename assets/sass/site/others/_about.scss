@@ -1,0 +1,58 @@
+.about-block {
+    padding-bottom: 40px;
+    @media only screen and (max-width: 991px) {
+        padding-bottom: 20px;
+    }
+    .about-content {
+        padding: 20px 145px 30px;
+        font-family: $font_barlow;
+        @media only screen and (max-width: 1199px) {
+            border-top: 1px solid rgba($black, 0.1);
+            padding: 60px 80px 30px;
+		}
+        @media only screen and (max-width: 991px) {
+            padding-left: 0;
+            padding-right: 0;
+		}
+        .heading {
+            font-size: 40px;
+            font-family: $font_barlow2;
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            @media only screen and (max-width: 1199px) {
+                font-size: 32px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+        }
+        p {
+            line-height: 1.95;
+        }
+    }
+}
+.follow-me {
+    font-weight: 700;
+    font-size: 16px;
+    color: $color__heading;
+    margin-top: 40px;
+    @media only screen and (max-width: 991px) {
+        margin-top: 20px;
+    }
+    > a {
+        font-size: 13px;
+        color: #9C9C9C;
+        padding: 0 5px;
+        &:hover {
+            color: $color__primary;
+        }
+        &:first-of-type {
+            padding-left: 20px;
+            @media only screen and (max-width: 575px) {
+                padding-left: 5px;
+            }
+        }
+    }
+}

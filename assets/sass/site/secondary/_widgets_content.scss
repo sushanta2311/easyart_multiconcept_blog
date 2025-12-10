@@ -1,0 +1,927 @@
+/*--------------------------------------------------------------
+# Popular, Latest Post, Recent Comment widget
+--------------------------------------------------------------*/
+.widget-post-list,
+.widget-comments-list {
+	.post {
+		margin-bottom: 30px;
+		background-color: transparent;
+		box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0);
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		&:last-child {
+			border-bottom: 0px solid;
+			margin-bottom: 0;
+		}
+		> .thumb-wrap {
+			overflow: hidden;
+			position: relative;
+			width: 90px;
+			-ms-flex-negative: 0;
+			    flex-shrink: 0;
+			@media only screen and (min-width: 992px) and (max-width: 1199px) {
+                width: 75px;
+            }
+			@media only screen and (max-width: 420px) {
+                width: 75px;
+            }
+		}
+		.content-entry-wrap {
+			padding-left: 15px;
+			margin-top: -3px;
+		}
+		.entry-meta-content {
+			margin-bottom: 0px;
+			-webkit-box-pack: start;
+			    -ms-flex-pack: start;
+			        justify-content: flex-start;
+			color: $color__meta;
+			> div {
+				margin-right: 20px;
+				&:last-child {
+					margin-right: 0;
+				}
+				> span {
+					color: $color__primary;
+				}
+			}
+		}
+		.entry-title {
+			font-size: 16px;
+			line-height: 1.5em;
+			margin-bottom: 10px;
+			@media only screen and (min-width: 992px) and (max-width: 1199px) {
+				font-size: 15px;
+				line-height: 1.4em;
+				margin-bottom: 7px;
+			}
+			@media only screen and (max-width: 420px) {
+                font-size: 15px;
+				line-height: 1.4em;
+				margin-bottom: 7px;
+            }
+			> a {
+				background-size: 0px 1px;
+				&:hover {
+					background-size: 100% 1px;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Categories And Archive Widget
+--------------------------------------------------------------*/
+.widget_categories,
+.widget_archive,
+.widget_layered_nav {
+	ul li {
+		font-size: 16px;
+		text-transform: capitalize;
+		display: block;
+		line-height: 1em;
+		font-weight: 500;
+		padding-top: 17px;
+		padding-bottom: 17px;
+		@include prefixed(transition, all 0.25s ease-in 0s);
+		position: relative;
+		overflow: hidden;
+		border-bottom: 1px solid $color__border-one;
+		color: $night_rider;
+		@media only screen and (max-width: 420px) {
+			font-size: 15px;
+		}
+		ul {
+			padding-left: 15px;
+		}
+		.count {
+			float: right;
+			color: $color_text_main;
+		}
+		a:hover {
+			color: $color__primary;
+			.count {
+				color: $color__primary;
+			}
+		}
+	}
+	ul > li:first-child {
+		padding-top: 5px !important;
+		margin-top: 0 !important;
+	}
+	.bsm-select-wrapper li {
+		padding-top: 0 !important;
+		margin-top: 0 !important;
+	}
+	.bsm-select-wrapper {
+		input.select-dropdown {
+			margin-bottom: 0;
+			padding: 0 20px;
+			box-sizing: border-box;
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-radius: 30px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		span.caret {
+			right: 15px;
+		}
+		.bsm-dropdown-content li > a,
+		.bsm-dropdown-content li > span {
+			font-size: 14px;
+			color: inherit;
+			display: block;
+			line-height: 30px;
+			padding: 10px 16px;
+		}
+	}
+}
+.widget_text {
+	.bsm-select-wrapper li {
+		padding-top: 0 !important;
+		margin-top: 0 !important;
+	}
+	.bsm-select-wrapper {
+		input.select-dropdown {
+			margin-bottom: 0;
+			padding: 0 20px;
+			box-sizing: border-box;
+			border-top: 1px solid #ddd;
+			border-left: 1px solid #ddd;
+			border-right: 1px solid #ddd;
+			border-radius: 30px;
+			font-size: 14px;
+			font-weight: 500;
+		}
+		span.caret {
+			right: 15px;
+		}
+		.bsm-dropdown-content li > a,
+		.bsm-dropdown-content li > span {
+			font-size: 14px;
+			color: inherit;
+			display: block;
+			line-height: 30px;
+			padding: 10px 16px;
+		}
+	}
+}
+/*------------------------------------------------------------------------
+# Links, Meta, NavMenu, Pages, Recent Comment, Recent Entries  Widget
+-------------------------------------------------------------------------*/
+.widget_links a,
+.widget_meta a,
+.widget_nav_menu .menu a,
+.widget_pages a,
+.widget_recent_comments a,
+.widget_recent_entries a,
+.widget_product_categories a {
+	border: 0;
+}
+.widget_nav_menu .menu a .fa {
+	display: none;
+}
+.widget_links,
+.widget_meta,
+.widget_nav_menu,
+.widget_pages,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_product_categories {
+	a {
+		border: 0;
+		text-decoration: none;
+		display: block;
+		&:hover,
+		&:focus {
+			color: $color__primary;
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		li {
+			padding: 8px 0;
+			border-bottom: 0 none;
+			line-height: 1.35em;
+		}
+	}
+	> ul {
+		position: relative;
+	}
+	ul > li:first-child {
+		margin-top: 0;
+		padding-top: 0px;
+		border-top: 0 none;
+	}
+	ul > li:last-child {
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+}
+.widget {
+	.menu {
+		position: relative;
+		> li:first-child {
+			border-top: 0 none;
+			padding-top: 0;
+		}
+		.sub-menu {
+			box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		}
+	}
+}
+
+.widget_nav_menu .sub-menu,
+.widget_pages .children {
+	border: 0;
+	margin: 0 0 0 1em;
+}
+.widget_recent_entries .post-date {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Socail Widget
+--------------------------------------------------------------*/
+.bt-socail-widget {
+	.widget-content {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		margin-bottom: -35px;
+		> .bt-socail-profile {
+			-webkit-transition: all 0.25s;
+			transition: all 0.25s;
+			margin-bottom: 35px;
+			width: 50%;
+			text-align: center;
+			@media only screen and (max-width: 991px) {
+                width: 25%;
+            }
+			@media only screen and (max-width: 420px) {
+                width: 50%;
+            }
+			&:last-child {
+				margin-bottom: 0;
+			}
+			> .icon {
+				text-transform: capitalize;
+				color: $night_rider;
+				font-family: $font-heading;
+				font-size: 24px;
+				&.bt-facebook-icon .social-icon {
+					color: #1976D2;
+				}
+				&.bt-twitter-icon .social-icon {
+					color: #03A9F4;
+				}
+				&.bt-linkedin-icon .social-icon {
+					color: #1976D2;
+				}
+				&.bt-youtube-icon .social-icon {
+					color: #FF0000;
+				}
+				> span {
+					display: block;
+					line-height: 15px;
+				}
+				.bt-name {
+					font-weight: 500;
+					font-size: 16px;
+					padding-top: 8px;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Twitter Feed Widget
+--------------------------------------------------------------*/
+.tb-twitter-feed-widget {
+	position: relativee;
+	.twitter-feed {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		.icon {
+			max-width: 35px;
+			font-size: 15px;
+			color: #1da1f3;
+			-webkit-box-flex: 0;
+			    -ms-flex: 0 0 35px;
+			        flex: 0 0 35px;
+		}
+		.info {
+			position: relative;
+			top: -5px;
+			> p {
+				line-height: 2.2em;
+			}
+			.date {
+				font-size: 13px;
+				text-transform: uppercase;
+				color: $color__primary;
+			}
+		}
+	}
+	.owl-dots {
+		text-align: right;
+		position: absolute;
+		width: 100%;
+		bottom: 6px;
+		left: 0;
+		> div {
+			width: 11px;
+			height: 11px;
+			border: 1px solid $color__primary;
+			border-radius: 50%;
+			margin: 0 3px;
+			display: inline-block;
+			-webkit-transition: all 0.25s;
+			transition: all 0.25s;
+			&.active {
+				background-color: $color__primary;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Instafeed Widget
+--------------------------------------------------------------*/
+.bt-instafeed-widget {
+	position: relative;
+	#instafeed {
+		overflow: hidden;
+		padding-left: 0px;
+		list-style: none;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		> .feed-item {
+			max-width: 16.6666%;
+			@media only screen and (max-width: 420px) {
+				max-width: 33.33333%;
+			}
+			a {
+				display: block;
+				position: relative;
+				.overlay {
+					position: absolute;
+					content: "";
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background-color: rgba($black, 0.5);
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					color: $white;
+					transition: all 0.35s;
+					opacity: 0;
+					> i {
+						font-size: 28px;
+						transform: scale(4);
+						transition: all 0.35s;
+						@media only screen and (max-width: 575px) {
+							font-size: 20px;
+						}
+					}
+				}
+			}
+			img {
+				width: 100%;
+				-webkit-transition: all 0.25s;
+				transition: all 0.25s;
+			}
+			&:hover .overlay {
+				opacity: 1;
+				> i {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	&.style-two {
+		overflow: hidden;
+		#instafeed {
+			margin: -2px;
+			> .feed-item { 
+				max-width: calc(14.2857% - 4px);
+				margin: 0 2px 4px;
+				@media only screen and (max-width: 575px) {
+					max-width: calc(25% - 4px);
+				}
+			}
+		}
+	}
+	&.style-three {
+		#instafeed> .feed-item { 
+			max-width: 20%;
+		}
+	}
+	&.style-four {
+		padding-left: 90px;
+		@media only screen and (max-width: 991px) {
+			padding-left: 0;
+		}
+		#instafeed> .feed-item { 
+			max-width: 33.33333%;
+		}
+		.widget-content > a {
+			text-transform: uppercase;
+			font-size: 13px;
+			font-weight: 500;
+			display: block;
+			text-align: center;
+			margin-top: 20px;
+			@media only screen and (max-width: 991px) {
+				text-align: left;
+			}
+			&:hover,
+			&:focus {
+				color: $color__primary;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# About Me Widget
+--------------------------------------------------------------*/
+.bt-about-me-widget {
+	.author-thumb {
+		margin-bottom: 15px;
+		img {
+			width: 155px;
+			height: 155px;
+			border-radius: 50%;
+			margin: 0 auto;
+			@media only screen and (max-width: 420px) {
+				width: 120px;
+				height: 120px;
+			}
+		}
+	}
+	.widget-content {
+		background-color: $white;
+		text-align: center;
+		padding: 30px 15px 35px;
+	}
+	.info {
+		display: block;
+		font-size: 16px;
+		color: $soft_black;
+		@media only screen and (max-width: 575px) {
+			font-size: 15px;
+		}
+		.designation {
+			font-size: 20px;
+			font-weight: 700;
+			margin-bottom: 15px;
+			color: $color__heading;
+			@media only screen and (max-width: 1199px) {
+				font-size: 18px;
+				margin-bottom: 12px;
+			}
+		}
+		> p {
+			line-height: 1.65em;
+		}
+	}
+	.author-sign {
+		padding-top: 5px;
+		img {
+			margin: 0 auto;
+		}
+	}
+	&.style-two {
+		.author-thumb {
+			margin-bottom: 20px;
+			img {
+				width: auto;
+				height: auto;
+				border-radius: 0%;
+				margin: 0 auto;
+			}
+		}
+		.widget-content {
+			background-color: transparent;
+			padding: 0;
+		}
+		.info {
+			font-size: 14px;
+			> p {
+				line-height: 1.9em;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Location Widget
+--------------------------------------------------------------*/
+.bt-location-widget {
+	.widget-content {
+		.footer-logo {
+			display: block;
+			margin-bottom: 30px;
+		}
+		.info-box {
+			margin-bottom: 20px;
+			@media only screen and (max-width: 767px) {
+				margin-bottom: 10px;
+			}
+			&:first-child {
+				margin-top: -5px;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+			a:hover {
+				color: $color__primary;
+			}
+			p {
+				margin-bottom: 0;
+				line-height: 2.2;
+				@media only screen and (max-width: 767px) {
+					line-height: 1.8;
+				}
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Business Hours Widget
+--------------------------------------------------------------*/
+.widget-business-hours {
+	.widget-content {
+		> ul {
+			margin-bottom: 15px;
+			font-weight: 500;
+			li {
+				margin: 10px 0;
+				overflow: hidden;
+				> span {
+					float: right;
+					display: inline-block;
+					padding-left: 15px;
+				}
+				&.closed > span {
+					color: $color__primary !important;
+				}
+			}
+		}
+	}
+}
+/*--------------------------------------------------------------
+# Social Share Widget
+--------------------------------------------------------------*/
+.social-share-widget {
+	.footer-social li a:hover {
+		background-color: $color__heading !important;
+		box-shadow: 3px 3px 11px rgba(34, 35, 141, 0.25);
+	}
+}
+
+/*--------------------------------------------------------------
+# Share Post Widget
+--------------------------------------------------------------*/
+.widget-share-post {
+	.post {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: start;
+		    -ms-flex-pack: start;
+		        justify-content: flex-start;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		border-bottom: 0px solid;
+		margin-bottom: 30px;
+		@media only screen and (max-width: 1199px) {
+			margin-bottom: 10px;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.post-thumbnail {
+			-webkit-box-flex: 95px;
+			    -ms-flex: 95px;
+			        flex: 95px;
+			max-width: 95px;
+		}
+		.entry-title {
+			font-weight: normal;
+			font-size: 18px;
+			font-family: $font_oswald;
+			text-transform: uppercase;
+			line-height: 1.2em;
+			margin-bottom: 10px;
+			margin-top: -3px;
+		}
+		.share-meta {
+			font-size: 12px;
+			> span {
+				display: inline-block;
+				padding-right: 3px;
+			}
+		}
+		.post-details {
+			-webkit-box-flex: 0;
+			    -ms-flex: 0 0 calc(100% - 95px);
+			        flex: 0 0 calc(100% - 95px);
+			padding-right: 0;
+			padding-left: 30px;
+			text-align: left;
+			max-width: calc(100% - 95px);
+			@media only screen and (max-width: 1199px) {
+				padding-left: 15px;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Signup Widget
+--------------------------------------------------------------*/
+.tb-signup-widget {
+	background-color: $white;
+	.signup-box {
+		text-align: center;
+		padding: 35px 30px 40px;
+		> h2 {
+			font-size: 24px;
+			font-weight: 600;
+			color: $color__heading;
+			line-height: 1.2em;
+			margin-bottom: 15px;
+			@media only screen and (max-width: 1199px) {
+				font-size: 20px;
+			}
+		}
+	}
+	.signup-form {
+		text-align: center;
+		padding-top: 10px;
+		.form-group {
+			margin-bottom: 0px;
+			input[type='email'] {
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				border-radius: 5px;
+				width: 100%;
+				font-size: 14px;
+				text-align: center;
+				padding: 10px 0;
+				margin-bottom: 20px;
+				background-color: transparent;
+			}
+		}
+		.btn-default {
+			width: 100%;
+			font-family: $font-heading;
+			border-radius: 5px;
+			background-color: #444444;
+			@media only screen and (min-width: 768px) and (max-width: 991px) {
+				width: auto;
+			}
+			&:hover {
+				background-color: $color__primary;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Subscribe Widget
+--------------------------------------------------------------*/
+.tb-subscribe-widget {
+	.widget-content {
+		margin-top: -2px;
+	}
+	.subscribe-form {
+		padding-top: 15px;
+		#mc-form {
+			position: relative;
+			#subscribe-btn {
+				-ms-flex-negative: 0;
+				    flex-shrink: 0;
+				margin-left: 5px;
+				padding: 10px 20px 9px;
+				font-size: 14px;
+				@media only screen and (max-width: 380px) {
+					width: 100%;
+					margin-left: 0;
+				}
+			}
+		}
+		.form-group {
+			margin-bottom: 15px;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			    -ms-flex-align: center;
+							align-items: center;
+			@media only screen and (max-width: 380px) {
+				flex-direction: column;
+			}
+			label {
+				display: block;
+			}
+			input[type='email'] {
+				background-color: $white_smoke;
+				border: 0px solid;
+				padding: 8px 20px;
+				width: 100%;
+				border-radius: 0;
+				font-size: 13px;
+				@media only screen and (max-width: 380px) {
+					flex-shrink: 0;
+					margin-bottom: 15px;
+				}
+				&:focus {
+					color: $color__heading;
+					border-color: $color__primary;
+				}
+			}
+		}
+		p {
+			text-align: right;
+			> span {
+				color: $color__primary;
+			}
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# RSS Widget
+--------------------------------------------------------------*/
+.widget_rss {
+	ul {
+		list-style: none;
+		margin: 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	li {
+		margin-bottom: 1.6em;
+		padding-bottom: 25px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		.rssSummary {
+			margin: 5px 0;
+			line-height: 1.75em;
+		}
+	}
+	.rsswidget {
+		border: 0;
+		font-weight: 700;
+	}
+	.rsswidget img {
+		margin-top: -4px;
+	}
+	.rss-date,
+	cite {
+		font-size: 0.8em;
+		font-style: normal;
+		display: block;
+		line-height: 2;
+		opacity: 0.8;
+	}
+	> p {
+		position: relative;
+	}
+}
+
+#wp-calendar caption {
+	font-weight: 600;
+}
+#wp-calendar {
+	td,
+	th {
+		padding: 8px;
+		text-align: center;
+		border: 1px solid #ddd;
+	}
+}
+/*--------------------------------------------------------------
+# Search Widget
+--------------------------------------------------------------*/
+.widget_search,
+.widget_product_search {
+	.input-group {
+		position: relative;
+		.form-controller {
+			display: table-cell;
+			padding: 7px 15px 5px;
+			margin-bottom: 0;
+			font-size: 12px;
+			border-radius: 0px;
+			background-color: transparent;
+			box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+			height: 40px;
+			outline: none;
+			border: 1px solid $color__border-one;
+			width: 100%;
+			text-transform: uppercase;
+			&:focus {
+				border-color: $color__primary;
+			}
+		}
+	}
+	button {
+		border: 0px solid;
+		background-color: $color__primary;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		right: 0px;
+		line-height: 44px;
+		top: 0;
+		font-size: 13px;
+		color: $white;
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}
+.widget_search.style-two {
+	.input-group {
+		.form-controller {
+			font-size: 14px;
+			height: 52px;
+			text-transform: none;
+		}
+		.btn-search {
+			background-color: transparent;
+			width: 50px;
+			height: 50px;
+			line-height: 52px;
+			font-size: 16px;
+			color: $black;
+			&:hover {
+				color: $color__primary;
+			}
+		}
+	}
+}
+
+.tagcloud {
+	margin-bottom: -7px;
+	a {
+		padding: 7px 17px 8px;
+		font-size: 14px;
+		display: inline-block;
+		margin-right: 3px;
+		margin-bottom: 7px;
+		font-weight: normal;
+		text-transform: capitalize;
+		border-radius: 20px;
+		background-color: #f2f2f2;
+		@media only screen and (max-width: 1199px) {
+			padding: 7px 12px;
+		}
+		&:hover {
+			color: $white;
+			background-color: $color__primary;
+		}
+	}
+}
+
+.widget_gallery {
+	.gallery-content {
+		img {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.dark {
+	.widget_categories,
+	.widget_archive,
+	.widget_layered_nav {
+		ul li {
+			color: #e1e1e1;
+		}
+	}
+}

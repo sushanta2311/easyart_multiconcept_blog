@@ -1,0 +1,117 @@
+.contact-block {
+    padding-bottom: 50px;
+    .contact-content {
+        padding: 50px 160px 30px;
+        font-family: $font_barlow;
+        @media only screen and (max-width: 1199px) {
+            border-top: 1px solid rgba($black, 0.1);
+            padding: 60px 80px 30px;
+		}
+        @media only screen and (max-width: 991px) {
+            padding-left: 0;
+            padding-right: 0;
+		}
+        .heading {
+            font-size: 40px;
+            font-family: $font_barlow2;
+            font-weight: 500;
+            line-height: 1.25;
+            margin-bottom: 20px;
+            @media only screen and (max-width: 1199px) {
+                font-size: 32px;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 28px;
+                margin-bottom: 15px;
+            }
+        }
+        p {
+            line-height: 1.9;
+            font-size: 20px;
+            color: $black;
+            @media only screen and (max-width: 991px) {
+                font-size: 18px;
+            }
+            @media only screen and (max-width: 575px) {
+                font-size: 16px;
+            }
+        }
+        .follow-me {
+            margin-top: 30px;
+            @media only screen and (max-width: 991px) {
+                margin-top: 15px;
+            }
+        }
+    }
+    #gmaps {
+        height: 280px; 
+    }
+}
+
+
+.contact-form {
+    padding-top: 40px;
+    ::-webkit-input-placeholder { 
+    color: $white;
+    opacity: 0.8;
+    }
+    :-moz-placeholder {
+    color: $white;
+    opacity: 0.8;
+    }
+    ::-moz-placeholder {
+    color: $white;
+    opacity: 0.8;
+    }
+    :-ms-input-placeholder {
+    color: $white;
+    opacity: 0.8;
+    }
+    .form-group {
+        margin-bottom: 25px;
+        label {
+            display: block;
+            line-height: 1.2em;
+            margin-bottom: 9px;
+            text-align: left;
+            font-size: 13px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-family: $font_barlow;
+            font-weight: 500;
+        }
+        input,
+        textarea {
+            color: $black;
+            font-size: 14px;
+            position: relative;
+            width: 100%;
+            background-color: transparent;
+            border: 2px solid rgba($black,0.1);
+            padding: 0 0 13px !important;
+            &:focus {
+                border-color: rgba($black,0.5) !important;
+            }
+        }
+        textarea {
+            min-height: 160px;
+            max-width: 100%;
+        }
+    }
+    .btn-primary {
+        min-width: 200px;
+        border-color: rgba($black,0.1);
+        text-transform: uppercase;
+        color: rgba($black,0.7);
+    }
+}
+.contact-form .input-success, 
+.contact-form .input-error {
+    float: left;
+    width: 100%;
+    clear: both;
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 5px 15px;
+    display: none;
+}
